@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainWindowController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="257.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="121.0" prefWidth="256.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="31.0" text="Меню администратора" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXButton fx:id="btnExpense" onAction="#menuClicks" prefHeight="54.0" prefWidth="256.0" stylesheets="@style.css" text="Расходы" textFill="#e7e5e5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnIncome" onAction="#menuClicks" prefHeight="54.0" prefWidth="256.0" stylesheets="@style.css" text="Доходы" textFill="#e7e5e5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBalance" onAction="#menuClicks" prefHeight="54.0" prefWidth="256.0" stylesheets="@style.css" text="Счета" textFill="#e7e5e5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExpensesReport" onAction="#menuClicks" prefHeight="54.0" prefWidth="256.0" stylesheets="@style.css" text="Отчеты о дохохдах и расходах" textFill="#e7e5e5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAdministration" onAction="#menuClicks" prefHeight="54.0" prefWidth="256.0" stylesheets="@style.css" text="Администрирование" textFill="#e7e5e5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <StackPane fx:id="switchPane" layoutX="257.0" prefHeight="576.0" prefWidth="798.0" style="-fx-background-color: #02030A;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pnlMoney" prefHeight="576.0" prefWidth="798.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ExpenseController">
+    <children>
+        <Pane prefHeight="101.0" prefWidth="798.0" style="-fx-background-color: #02030A;">
+            <children>
+                <Label layoutX="43.0" layoutY="31.0" text="Список расходов" textFill="#e7e5e5">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <JFXButton fx:id="btnAdd" layoutX="651.0" layoutY="31.0" onAction="#addExpense" prefHeight="40.0" prefWidth="133.0" stylesheets="@style.css" text="Добавить" textFill="#e7e5e5">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnDel" layoutX="501.0" layoutY="31.0" onAction="#refreshExpense" prefHeight="40.0" prefWidth="133.0" stylesheets="@style.css" text="Обновить" textFill="#e7e5e5">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnSave" layoutX="300.0" layoutY="31.0" onAction="#exel" prefHeight="40.0" prefWidth="180.0" stylesheets="@style.css" text="Сохранить в EXEL" textFill="#e7e5e5">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </Pane>
+        <Pane layoutX="1.0" layoutY="97.0" prefHeight="480.0" prefWidth="798.0">
+            <children>
+                <TableView fx:id="tblExpense" prefHeight="479.0" prefWidth="798.0">
+                    <columns>
+                        <TableColumn fx:id="tcID" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="tcGroup" prefWidth="144.0" text="Группа" />
+                        <TableColumn fx:id="tcSum" prefWidth="93.60003662109375" sortable="false" text="Сумма" />
+                        <TableColumn fx:id="tcBalance" prefWidth="91.2000732421875" text="Со счёта" />
+                        <TableColumn fx:id="tcDate" minWidth="0.0" prefWidth="133.60003662109375" text="Дата" />
+                        <TableColumn fx:id="tcComm" minWidth="8.0" prefWidth="287.20001220703125" sortable="false" text="Комментарии" />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+    </children>
+</Pane>
